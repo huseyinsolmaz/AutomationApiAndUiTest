@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180919 22:21:48.168" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/huseyinsolmaz/sites/RobottestProject/tests/project.robot" id="s1" name="Project">
+<test id="s1-t1" name="Amazon login and wish list test">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.com/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20180919 22:21:48.372" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" endtime="20180919 22:21:55.406" starttime="20180919 22:21:48.371"></status>
+</kw>
+<kw name="Get Location" library="Selenium2Library">
+<doc>Returns the current browser URL.</doc>
+<assign>
+<var>${current_url}</var>
+</assign>
+<msg timestamp="20180919 22:21:55.435" level="INFO">${current_url} = https://www.amazon.com/</msg>
+<status status="PASS" endtime="20180919 22:21:55.435" starttime="20180919 22:21:55.407"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${current_url}'=='https://www.amazon.com/'</arg>
+<arg>Log To Console</arg>
+<arg>\nYou are in amazon</arg>
+<arg>console=true</arg>
+<arg>ELSE</arg>
+<arg>Log to console</arg>
+<arg>${current_url}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nYou are in amazon</arg>
+<arg>console=true</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:21:55.437" starttime="20180919 22:21:55.436"></status>
+</kw>
+<status status="PASS" endtime="20180919 22:21:55.437" starttime="20180919 22:21:55.435"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>id:nav-link-accountList</arg>
+</arguments>
+<msg timestamp="20180919 22:21:55.438" level="INFO">Simulating Mouse Over on element 'id:nav-link-accountList'.</msg>
+<status status="PASS" endtime="20180919 22:22:00.054" starttime="20180919 22:21:55.437"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://a[@data-nav-ref="nav_signin"]</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:00.092" starttime="20180919 22:22:00.054"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-nav-ref="nav_signin"]</arg>
+</arguments>
+<msg timestamp="20180919 22:22:00.092" level="INFO">Clicking element 'xpath://a[@data-nav-ref="nav_signin"]'.</msg>
+<status status="PASS" endtime="20180919 22:22:01.619" starttime="20180919 22:22:00.092"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:ap_email</arg>
+<arg>angealhelwey@gmail.com</arg>
+</arguments>
+<msg timestamp="20180919 22:22:01.619" level="INFO">Typing text 'angealhelwey@gmail.com' into text field 'id:ap_email'.</msg>
+<status status="PASS" endtime="20180919 22:22:01.863" starttime="20180919 22:22:01.619"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:continue</arg>
+</arguments>
+<msg timestamp="20180919 22:22:01.863" level="INFO">Clicking element 'id:continue'.</msg>
+<status status="PASS" endtime="20180919 22:22:02.641" starttime="20180919 22:22:01.863"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:ap_password</arg>
+<arg>12801988</arg>
+</arguments>
+<msg timestamp="20180919 22:22:02.642" level="INFO">Typing text '12801988' into text field 'id:ap_password'.</msg>
+<status status="PASS" endtime="20180919 22:22:02.743" starttime="20180919 22:22:02.641"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:signInSubmit</arg>
+</arguments>
+<msg timestamp="20180919 22:22:02.744" level="INFO">Clicking element 'id:signInSubmit'.</msg>
+<status status="PASS" endtime="20180919 22:22:06.697" starttime="20180919 22:22:02.744"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:twotabsearchtextbox</arg>
+<arg>Samsung</arg>
+</arguments>
+<msg timestamp="20180919 22:22:06.698" level="INFO">Typing text 'Samsung' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" endtime="20180919 22:22:08.053" starttime="20180919 22:22:06.698"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@value="Go"]</arg>
+</arguments>
+<msg timestamp="20180919 22:22:08.053" level="INFO">Clicking element 'xpath://input[@value="Go"]'.</msg>
+<status status="PASS" endtime="20180919 22:22:10.704" starttime="20180919 22:22:08.053"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>xpath://div[@id="s-result-info-bar-content"]//span[@class="a-color-state a-text-bold"]</arg>
+<arg>"Samsung"</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:10.740" starttime="20180919 22:22:10.705"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id="s-result-info-bar-content"]//span[@class="a-color-state a-text-bold"]</arg>
+</arguments>
+<assign>
+<var>${search_keyword}</var>
+</assign>
+<msg timestamp="20180919 22:22:10.761" level="INFO">${search_keyword} = "Samsung"</msg>
+<status status="PASS" endtime="20180919 22:22:10.761" starttime="20180919 22:22:10.740"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>\n Results for ${search_keyword}</arg>
+<arg>DEBUG</arg>
+<arg>console=true</arg>
+<arg>html=true</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:10.762" starttime="20180919 22:22:10.761"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>class:pagnLink</arg>
+</arguments>
+<assign>
+<var>${page_number}</var>
+</assign>
+<msg timestamp="20180919 22:22:10.796" level="INFO">${page_number} = 2</msg>
+<status status="PASS" endtime="20180919 22:22:10.797" starttime="20180919 22:22:10.762"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${page_number}'=='2'</arg>
+<arg>Click element</arg>
+<arg>class:pagnLink</arg>
+<arg>ELSE</arg>
+<arg>click element</arg>
+<arg>xpath://span[@pagnLink][2]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>class:pagnLink</arg>
+</arguments>
+<msg timestamp="20180919 22:22:10.798" level="INFO">Clicking element 'class:pagnLink'.</msg>
+<status status="PASS" endtime="20180919 22:22:11.044" starttime="20180919 22:22:10.797"></status>
+</kw>
+<status status="PASS" endtime="20180919 22:22:11.044" starttime="20180919 22:22:10.797"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>class:pagnCur</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:12.973" starttime="20180919 22:22:11.044"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>class:pagnCur</arg>
+</arguments>
+<assign>
+<var>${current_page}</var>
+</assign>
+<msg timestamp="20180919 22:22:12.996" level="INFO">${current_page} = 2</msg>
+<status status="PASS" endtime="20180919 22:22:12.997" starttime="20180919 22:22:12.973"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nYou are in '${current_page}'</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:12.997" starttime="20180919 22:22:12.997"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li[3]//h2</arg>
+</arguments>
+<assign>
+<var>${product_name}</var>
+</assign>
+<msg timestamp="20180919 22:22:13.033" level="INFO">${product_name} = Samsung Galaxy Watch (46mm) Silver (Bluetooth), SM-R800NZSAXAR – US Version with Warranty</msg>
+<status status="PASS" endtime="20180919 22:22:13.033" starttime="20180919 22:22:12.997"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li[3]//h2</arg>
+</arguments>
+<msg timestamp="20180919 22:22:13.034" level="INFO">Clicking element 'xpath://li[3]//h2'.</msg>
+<status status="PASS" endtime="20180919 22:22:17.289" starttime="20180919 22:22:13.033"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:wishListDropDown</arg>
+</arguments>
+<msg timestamp="20180919 22:22:17.290" level="INFO">Clicking element 'id:wishListDropDown'.</msg>
+<status status="PASS" endtime="20180919 22:22:17.524" starttime="20180919 22:22:17.289"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://li[@class="a-dropdown-item"][2]</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:18.453" starttime="20180919 22:22:17.524"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li[@class="a-dropdown-item"][2]</arg>
+</arguments>
+<msg timestamp="20180919 22:22:18.454" level="INFO">Clicking element 'xpath://li[@class="a-dropdown-item"][2]'.</msg>
+<status status="PASS" endtime="20180919 22:22:18.775" starttime="20180919 22:22:18.454"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>id:WLHUC_continue</arg>
+<arg>Continue shopping</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:19.578" starttime="20180919 22:22:18.775"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id="WLHUC_info"]//a</arg>
+</arguments>
+<assign>
+<var>${wish_list_name}</var>
+</assign>
+<msg timestamp="20180919 22:22:19.624" level="INFO">${wish_list_name} = Samsung Galaxy Watch (46mm) Silver (Bluetooth), SM-R800NZSAXAR – US Version with Warranty</msg>
+<status status="PASS" endtime="20180919 22:22:19.625" starttime="20180919 22:22:19.578"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${wish_list_name}'=='${product_name}'</arg>
+<arg>log to console</arg>
+<arg>\nCorrect Product</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>\nWrong Product</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nCorrect Product</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:19.626" starttime="20180919 22:22:19.625"></status>
+</kw>
+<status status="PASS" endtime="20180919 22:22:19.626" starttime="20180919 22:22:19.625"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:WLHUC_continue</arg>
+</arguments>
+<msg timestamp="20180919 22:22:19.626" level="INFO">Clicking element 'id:WLHUC_continue'.</msg>
+<status status="PASS" endtime="20180919 22:22:19.844" starttime="20180919 22:22:19.626"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>id:nav-link-accountList</arg>
+</arguments>
+<msg timestamp="20180919 22:22:19.845" level="INFO">Simulating Mouse Over on element 'id:nav-link-accountList'.</msg>
+<status status="PASS" endtime="20180919 22:22:19.968" starttime="20180919 22:22:19.845"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[@id="nav-flyout-wl-items"]//a[2]</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:20.681" starttime="20180919 22:22:19.969"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id="nav-flyout-wl-items"]//a[2]</arg>
+</arguments>
+<msg timestamp="20180919 22:22:20.681" level="INFO">Clicking element 'xpath://div[@id="nav-flyout-wl-items"]//a[2]'.</msg>
+<status status="PASS" endtime="20180919 22:22:21.864" starttime="20180919 22:22:20.681"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@name="submit.deleteItem"]</arg>
+</arguments>
+<msg timestamp="20180919 22:22:21.864" level="INFO">Clicking element 'xpath://input[@name="submit.deleteItem"]'.</msg>
+<status status="PASS" endtime="20180919 22:22:22.797" starttime="20180919 22:22:21.864"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>xpath://ul[@id="g-items"]//div[@class="a-alert-content"]</arg>
+<arg>Deleted</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:22.847" starttime="20180919 22:22:22.798"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://ul[@id="g-items"]//div[@class="a-alert-content"]</arg>
+</arguments>
+<assign>
+<var>${Alert_message}</var>
+</assign>
+<msg timestamp="20180919 22:22:22.869" level="INFO">${Alert_message} = Deleted</msg>
+<status status="PASS" endtime="20180919 22:22:22.870" starttime="20180919 22:22:22.847"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\n${Alert_message}</arg>
+</arguments>
+<status status="PASS" endtime="20180919 22:22:22.870" starttime="20180919 22:22:22.870"></status>
+</kw>
+<doc>As user sign in and Searched a key go to 3. page and 3. product then add to wish list then delete on wish list</doc>
+<status status="PASS" endtime="20180919 22:22:22.871" critical="yes" starttime="20180919 22:21:48.370"></status>
+</test>
+<doc>This is basic amazon wish list test</doc>
+<status status="PASS" endtime="20180919 22:22:22.872" starttime="20180919 22:21:48.170"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Project" pass="1">Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
