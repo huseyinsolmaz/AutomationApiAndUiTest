@@ -35,10 +35,10 @@ note:
 if you want to change browser
 You have to add on run in this: 
 
-for chrome : -v browser:chrome   
+for chrome : -v BROWSER:chrome   
 
-for Firefox : : -v browser:ff
+for Firefox : : -v BROWSER:ff
 
 Example
 
-``robot -d results -v browser:ff tests/project.robot``
+``robot -d results -v BROWSER:ff tests/project.robot``
