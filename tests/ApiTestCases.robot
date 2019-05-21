@@ -1,10 +1,6 @@
 *** Settings ***
-Suite Setup
-Suite Teardown    Close All Browsers
-Test Setup        Launch Browser  ${BROWSER}
-Test Teardown     When Test Fail Take Screenshot
 Resource          ../Variables/MainFunctions.robot
-Resource          ../Facilities/TrendyolFacilities.robot
+Resource          ../Facilities/TrendyolApiFacilities.robot
 Library           Selenium2Library
 Library           Collections
 Library           Process
@@ -16,13 +12,10 @@ Library           String
 Library           ../Variables/PythonFunctions.py
 
 *** Variables ***
-${BROWSER}=   chrome
+
 *** Test Cases ***
-TrendyolExample
-    ClosePopup
-    TrendyolLogin
-    GoToBoutique
-    GoToRandomBoutiqueAndAddToBasket
+BookApiTestCases
+    BookGetAndPutRequest
 
 
 *** Keywords ***
