@@ -34,7 +34,7 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: outputxunit
+    testResultsFiles: outputxunit.xml
     searchFolder: 'D:\\a\\1\\s\\'
   condition: succeededOrFailed()
   displayName: 'Publish Test Results output.xml'
