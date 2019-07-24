@@ -30,11 +30,11 @@ steps:
   displayName: 'Install dependencies'
 
 - script: 
-    robot --pythonpath . tests/project.robot
+    robot --pythonpath . -x outputxunit tests/project.robot
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: log.html
+    testResultsFiles: outputxunit.xml
     searchFolder: 'D:\\a\\1\\s\\'
     mergeTestResults: true
   condition: succeededOrFailed()
