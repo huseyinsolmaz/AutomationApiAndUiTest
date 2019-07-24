@@ -29,7 +29,7 @@ steps:
     pip install requests
   displayName: 'Install dependencies'
 
-- powershell: 
+- task: 
     robot --pythonpath . -x outputxunit.xml tests/project.robot
 
 - task: PublishTestResults@2
