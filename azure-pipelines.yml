@@ -27,7 +27,6 @@ steps:
     pip install robotframework robotframework-selenium2library robotframework robotframework-faker && npm install chromedriver
     pip install robotframework-extendedrequestslibrary
     pip install requests
-    displayName: 'Install Robotframework'
 - script: | 
     sudo apt-get update && sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4 && sudo apt-get install default-jdk 
     sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
@@ -39,8 +38,6 @@ steps:
     sudo mv chromedriver /usr/bin/chromedriver
     sudo chown root:root /usr/bin/chromedriver
     sudo chmod +x /usr/bin/chromedriver
-  displayName: 'Install ChromeDriver'
 
 - script: 
     robot --pythonpath . -d result tests/project.robot
-  displayName: 'Run Forerst Run'
