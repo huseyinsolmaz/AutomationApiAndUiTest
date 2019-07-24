@@ -18,7 +18,7 @@ Launch Browser
     ...    _Author:_ Hüseyin Solmaz \ \ _Creation:_ 2019/04/08
     [Arguments]  ${BROWSER}
     Set Screenshot Directory  ${CURDIR}/../Tests/testresults/${TEST_NAME}
-    Open Browser    ${trendyolUrl}    ${BROWSER}    alias=Main
+    Open Browser    ${trendyolUrl}    ${BROWSER}    alias=Main  executable_path=D:/a/1/s/node_modules/chromedriver/lib/chromedriver/chromedriver.exe
     Maximize Browser Window
 
 wait for home page
