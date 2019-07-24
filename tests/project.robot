@@ -19,10 +19,12 @@ Library           ../Variables/PythonFunctions.py
 ${BROWSER}=   chrome
 *** Test Cases ***
 TrendyolExample
-    ClosePopup
-    TrendyolLogin
-    GoToBoutique
-    GoToRandomBoutiqueAndAddToBasket
+    ConsoleLog  test
+2TrendyolExample
+    ConsoleLog  test
+
+1TrendyolExample
+    ConsoleLog  test
 
 
 *** Keywords ***
