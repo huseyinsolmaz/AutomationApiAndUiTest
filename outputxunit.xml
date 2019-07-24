@@ -2,7 +2,6 @@
 <testsuite name="Project" tests="1" errors="0" failures="0" skipped="0" time="0.742">
 <testcase classname="Project" name="TrendyolExample" time="0.000">
 </testcase>
-</testsuite>
 <robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190711 17:18:58.623" rpa="false">
 <suite id="s1" name="Project" source="C:\www\N11TestCase\tests\project.robot">
 <test id="s1-t1" name="01.N11TestCase-KeyTorc">
@@ -687,3 +686,4 @@
 <msg timestamp="20190711 17:19:36.428" level="WARN">You are correct keyword -- Samsung</msg>
 </errors>
 </robot>
+</testsuite>
