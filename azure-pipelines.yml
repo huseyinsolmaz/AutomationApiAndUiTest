@@ -19,19 +19,6 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install Robotframework
-    pip install Robotframework-Faker
-    pip install Robotframework-ExtendedRequestsLibrary
-    pip install Robotframework-Selenium2Library
-    Npm install chromedriver
-    pip install requests
-  displayName: 'Install dependencies'
-
-- script: 
-    robot --pythonpath . -x outputxunit tests/project.robot
-
 - task: PublishTestResults@2
   inputs:
     testResultsFiles: outputxunit.xml
