@@ -25,5 +25,4 @@ steps:
   displayName: 'Install dependencies'
 
 - powershell: 
-    venv\Scripts\activate.bat
     robot -d result tests/project.robot
