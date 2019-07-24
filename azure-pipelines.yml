@@ -30,11 +30,12 @@ steps:
   displayName: 'Install dependencies'
 
 - script: 
-    robot --pythonpath . -x outputxunit.xml tests/project.robot
+    robot --pythonpath . tests/project.robot
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: outputxunit.xml
+    testResultsFiles: output.xml
     searchFolder: 'D:\\a\\1\\s\\'
+    mergeTestResults: true
   condition: succeededOrFailed()
   displayName: 'Publish Test Results output.xml'
