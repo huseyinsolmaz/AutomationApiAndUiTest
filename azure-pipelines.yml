@@ -29,12 +29,13 @@ steps:
     pip install requests
   displayName: 'Install dependencies'
 
-- powershell: 
-    robot --pythonpath . -x outputxunit.xml test/project.robot
+- script: 
+    robot --pythonpath . tests/project.robot
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: outputxunit
+    testResultsFiles: output.xml
     searchFolder: 'D:\\a\\1\\s\\'
+    mergeTestResults: true
   condition: succeededOrFailed()
   displayName: 'Publish Test Results output.xml'
