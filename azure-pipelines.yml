@@ -25,4 +25,4 @@ steps:
   displayName: 'Install dependencies'
 
 - powershell: 
-    robot -d result tests/project.robot
+    venv\Scripts\robot -d result tests/project.robot
