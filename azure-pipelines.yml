@@ -30,7 +30,7 @@ steps:
   displayName: 'Install dependencies'
 
 - powershell: 
-    robot --pythonpath . -x outputxunit.xml test/project.robot
+    robot --pythonpath . -x outputxunit.xml test\\project.robot
 
 - task: PublishTestResults@2
   inputs:
