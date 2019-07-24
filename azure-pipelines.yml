@@ -31,3 +31,10 @@ steps:
 
 - powershell: 
     robot -d result tests/project.robot
+
+- task: PublishTestResults@1
+  inputs:
+  testResultsFiles: 'result\\output.xml'
+  searchFolder: 'D:\\a\\1\\s\\'
+  condition: succeededOrFailed()
+  displayName: 'Publish Test Results output.xml'
