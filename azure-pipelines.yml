@@ -21,8 +21,13 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install virtualenv
+    pip install Robotframework
+    pip install Robotframework-Faker
+    pip install Robotframework-ExtendedRequestsLibrary
+    pip install Robotframework-Selenium2Library
+    Npm install chromedriver
+    pip install requests
   displayName: 'Install dependencies'
 
 - powershell: 
-    venv\Scripts\robot -d result tests/project.robot
+    robot -d result tests/project.robot
