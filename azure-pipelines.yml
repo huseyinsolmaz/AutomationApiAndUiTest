@@ -21,8 +21,9 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
+    pip install virtualenv
   displayName: 'Install dependencies'
 
-- script:
+- powershell: 
     venv\Scripts\activate
     robot -d result tests/project.robot
