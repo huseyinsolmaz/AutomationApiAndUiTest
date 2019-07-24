@@ -29,8 +29,9 @@ steps:
     pip install requests
   displayName: 'Install dependencies'
 
-- task: 
+- task: 'Run Robot'
     robot --pythonpath . -x outputxunit.xml tests/project.robot
+  displayName: 'Run Robot'
 
 - task: PublishTestResults@2
   inputs:
