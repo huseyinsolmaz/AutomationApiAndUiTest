@@ -36,5 +36,5 @@ steps:
   inputs:
     testResultsFiles: 'result\\output.xml'
     searchFolder: 'D:\\a\\1\\s\\'
-    condition: succeededOrFailed()
-    displayName: 'Publish Test Results output.xml'
+  condition: succeededOrFailed()
+  displayName: 'Publish Test Results output.xml'
