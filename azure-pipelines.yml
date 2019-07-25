@@ -21,7 +21,7 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: output.xml
+    testResultsFiles: result/output.xml
     searchFolder: 'D:\\a\\1\\s\\'
     mergeTestResults: true
   condition: succeededOrFailed()
