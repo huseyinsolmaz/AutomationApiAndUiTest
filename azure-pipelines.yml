@@ -26,8 +26,3 @@ steps:
     mergeTestResults: true
   condition: succeededOrFailed()
   displayName: 'Publish Test Results output.xml'
-
-- task:
-    $(UserProfile)\.nuget\packages\reportgenerator\x.y.z\tools\net47\ReportGenerator.exe
-    "-reports:report.html;output.xml;log.html"
-    "-targetdir:coveragereport"
