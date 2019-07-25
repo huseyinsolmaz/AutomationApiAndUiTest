@@ -21,8 +21,13 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: outputxunit.xml
+    testResultsFiles: outputxunit.xml; report.html; log.html
     searchFolder: 'D:\\a\\1\\s\\'
     mergeTestResults: true
   condition: succeededOrFailed()
   displayName: 'Publish Test Results output.xml'
+
+- task:
+    $(UserProfile)\.nuget\packages\reportgenerator\x.y.z\tools\net47\ReportGenerator.exe
+    "-reports:report.html;output.xml;log.html"
+    "-targetdir:coveragereport"
