@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Project" tests="1" errors="0" failures="0" skipped="0" time="1.338">
-<testcase classname="Project" name="TrendyolExample" time="0.005" owner="Hüseyin Solmaz" Errormessage="TestEerro" Attachments="result/log.html">
+<testcase classname="Project" name="TrendyolExample" time="0.005" owner="Hüseyin Solmaz" Error_message="TestEerro" Attachments="requirements">
 </testcase>
 </testsuite>
