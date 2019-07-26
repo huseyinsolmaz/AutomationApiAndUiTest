@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Project" tests="1" errors="0" failures="0" skipped="0" time="1.338">
-<testcase classname="Project" name="TrendyolExample" time="0.005">
+<testcase classname="Project" name="TrendyolExample" time="0.005" owner="Hüseyin Solmaz" Errormessage="TestEerro" Attachments="result/log.html">
 </testcase>
-<testcase id="s1-t1" name="TrendyolExample">
-			<kw name="ConsoleLog" library="MainFunctions">
-				<doc>***Description:***</doc>
-				<arguments>
-					<arg>test</arg>
-				</arguments>
-				<kw name="Log To Console" library="BuiltIn">
-					<doc>Logs the given message to the console.</doc>
-					<arguments>
-						<arg>\n${text}</arg>
-					</arguments>
-					<status status="PASS" starttime="20190725 17:05:26.184" endtime="20190725 17:05:26.185"></status>
-				</kw>
-				<status status="PASS" starttime="20190725 17:05:26.183" endtime="20190725 17:05:26.185"></status>
-			</kw>
-			<status status="PASS" starttime="20190725 17:05:26.182" endtime="20190725 17:05:26.185" critical="yes"></status>
-		</testcase>
 </testsuite>
