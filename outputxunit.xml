@@ -3,7 +3,7 @@
   <Attachments>/requirements.txt</Attachments>
 <testcase classname="Project" name="TrendyolExample" time="0.005" owner="Hüseyin Solmaz" Error_message="TestEerro" Attachments="requirements.txt">
  <Attachments>/requirements.txt</Attachments>
-  <Test file>/requirements.txt</Test file>
+  <Testfile>/requirements.txt</Testfile>
 
   </testcase>
 </testsuite>
